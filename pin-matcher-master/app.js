@@ -36,11 +36,18 @@ document.getElementById('key-pad').addEventListener('click',function(event){
 function verifyPin(){
    // console.log('going to verify');
    const pin = document.getElementById('display-pin').value;
-   const typeNumber = document.getElementById('typed-numbers').value;
-   if(pin==typeNumber){
-      console.log('matched.YAY');
+   const typeNumbers = document.getElementById('typed-numbers').value;
+ const successMessage = document.getElementById('notify-success');
+const error = document.getElementById('notify-fail');
+
+   if(pin==typeNumbers){
+      // console.log('matched.YAY');
+     successMessage.style.display='block';
+     error.style.display='none';
    }
    else{
-      console.log('opps!');
+      // console.log('opps!');
+      error.style.display='block';
+      successMessage.style.display='none';
    }
 }
