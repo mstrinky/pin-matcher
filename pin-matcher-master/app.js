@@ -32,3 +32,15 @@ document.getElementById('key-pad').addEventListener('click',function(event){
   calcInput.value =newNumber;
   }
 })
+
+function verifyPin(){
+   // console.log('going to verify');
+   const pin = document.getElementById('display-pin').value;
+   const typeNumber = document.getElementById('typed-numbers').value;
+   if(pin==typeNumber){
+      console.log('matched.YAY');
+   }
+   else{
+      console.log('opps!');
+   }
+}
